@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('page_title', 'MyHobbies')</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -33,7 +33,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li><a class="nav-link{{ Request::is('/') ? ' active' : '' }}" href="/">Start</a></li>
+                        <li><a class="nav-link{{ Request::is('info') ? ' active' : '' }}"  href="/info">Info</a></li>
+                        <li><a class="nav-link{{ Request::is('hobby*') ? ' active' : '' }}"  href="/hobby">Hobbies</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -73,6 +75,34 @@
         </nav>
 
         <main class="py-4">
+            @isset($message_success)
+                <div class="container">
+                    <div class="alert alert-success" role="alert">
+                        {!! $message_success !!}
+                    </div>
+                </div>
+            @endisset
+
+            @isset($message_warning)
+                <div class="container">
+                    <div class="alert alert-success" role="alert">
+                        {!! $message_warning !!}
+                    </div>
+                </div>
+            @endisset
+
+
+            @if($errors->any())
+                <div class="container">
+                    <div class="alert alert-danger" role="alert">
+                        <ul class="mb-0">
+                            @foreach($errors->all() as $error)
+                                <li>{!! $error !!}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            @endif
             @yield('content')
         </main>
     </div>
