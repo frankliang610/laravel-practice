@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9573bc01-e181-451d-9417-360464b4ac25" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/hobby/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/TagController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Tag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/TagFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_05_003320_create_tags_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/TagSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/hobby/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HobbyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HobbyController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/hobby/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hobby/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,13 +155,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/hobby" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.postfix.templates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/hobby" />
       <recent name="$PROJECT_DIR$/resources/views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -176,7 +184,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609714411221</updated>
-      <workItem from="1609714414099" duration="13634000" />
+      <workItem from="1609714414099" duration="18507000" />
     </task>
     <servers />
   </component>

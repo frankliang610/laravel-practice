@@ -33,7 +33,7 @@ class HobbyController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -56,7 +56,7 @@ class HobbyController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Hobby  $hobby
+     * @param \App\Hobby $hobby
      * @return \Illuminate\Http\Response
      */
     public function show(Hobby $hobby)
@@ -69,34 +69,54 @@ class HobbyController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Hobby  $hobby
+     * @param \App\Hobby $hobby
      * @return \Illuminate\Http\Response
      */
     public function edit(Hobby $hobby)
     {
-        //
+
+
+        return view('hobby.edit', [
+            'hobby' => $hobby
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Hobby  $hobby
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Hobby $hobby
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Hobby $hobby)
     {
-        //
+        $request->validate([
+            'name' => 'required|min:3',
+            'description' => 'required|min:5',
+        ]);
+
+        $hobby->update([
+            'name' => $request->name,
+            'description' => $request->description,
+        ]);
+
+        return $this->index()->with([
+            'message_success' => "The hobby <b>" . $hobby->name . "</b> has been updated successfully."
+        ]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Hobby  $hobby
+     * @param \App\Hobby $hobby
      * @return \Illuminate\Http\Response
      */
     public function destroy(Hobby $hobby)
     {
-        //
+        $old_name = $hobby->name;
+        $hobby->delete();
+        return $this->index()->with([
+            'message_success' => "The hobby <b>" . $old_name . "</b> has been deleted successfully."
+        ]);
     }
 }
