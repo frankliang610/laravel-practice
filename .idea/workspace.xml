@@ -7,10 +7,10 @@
       <change afterPath="$PROJECT_DIR$/database/factories/TagFactory.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_05_003320_create_tags_table.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/database/seeds/TagSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/hobby/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/tag/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/tag/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/tag/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HobbyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HobbyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/hobby/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hobby/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -155,15 +155,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/hobby" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.postfix.templates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views/hobby" />
       <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$PROJECT_DIR$/resources/views/hobby" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/hobby" />
@@ -184,8 +184,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609714411221</updated>
-      <workItem from="1609714414099" duration="18507000" />
+      <workItem from="1609714414099" duration="21371000" />
     </task>
+    <task id="LOCAL-00001" summary="completed hobby page crud">
+      <created>1609807185897</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609807185898</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +204,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -204,5 +218,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="completed hobby crud" />
+    <MESSAGE value="completed hobby page crud" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed hobby page crud" />
   </component>
 </project>
