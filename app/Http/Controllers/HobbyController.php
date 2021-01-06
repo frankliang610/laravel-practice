@@ -56,8 +56,11 @@ class HobbyController extends Controller
             'user_id' => auth()->id()
         ]);
         $hobby->save();
-        return $this->index()->with([
-            'message_success' => "The hobby <b>" . $hobby->name . "</b> has been created successfully."
+//        return $this->index()->with([
+//            'message_success' => "The hobby <b>" . $hobby->name . "</b> has been created successfully."
+//        ]);
+        return redirect('/hobby/' . $hobby->id)->with([
+            'message_warning' => "Please assign some tags now."
         ]);
     }
 
@@ -76,7 +79,8 @@ class HobbyController extends Controller
         return view('hobby.show', [
             'hobby' => $hobby,
             'available_tags' => $available_tags,
-            'message_success' => Session::get('message_success')
+            'message_success' => Session::get('message_success'),
+            'message_warning' => Session::get('message_warning')
         ]);
     }
 
