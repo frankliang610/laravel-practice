@@ -10,19 +10,34 @@
                     <div class="card-body">
                         <b>{{ $hobby->name }}</b>
                         <p>{{ $hobby->description }}</p>
-                        <p>
-                            @foreach($hobby->tags as $tag)
-                                <a href="/tag"><span class="badge badge-{{ $tag->style }}">{{ $tag->name }}</span></a>
-                            @endforeach
-                        </p>
+                        @if($hobby->tags->count() > 0)
+                            <b>Attached Tags: </b> (Click to detach)
+                            <p>
+                                @foreach($hobby->tags as $tag)
+                                    <a href="/hobby/{{ $hobby->id }}/tag/{{ $tag->id }}/detach"><span
+                                            class="badge badge-{{ $tag->style }}">{{ $tag->name }}</span></a>
+                                @endforeach
+                            </p>
+                        @endif
+
+                        @if($available_tags->count() > 0)
+                            <b>Available Tags: </b> (Click to attach)
+                            <p>
+                                @foreach($available_tags as $tag)
+                                    <a href="/hobby/{{ $hobby->id }}/tag/{{ $tag->id }}/attach"><span
+                                            class="badge badge-{{ $tag->style }}">{{ $tag->name }}</span></a>
+                                @endforeach
+                            </p>
+                        @endif
                     </div>
                 </div>
-                <div class="mt-2">
-                    <a href="{{ URL::previous() }}" class="btn btn-primary btn-sm">
-                        <i class="fas fa-arrow-circle-up"></i>
-                        Back to Overview
-                    </a>
-                </div>
+{{--                <div class="mt-2">--}}
+{{--                    <a href="{{ URL::previous() }}"--}}
+{{--                       class="btn btn-primary btn-sm">--}}
+{{--                        <i class="fas fa-arrow-circle-up"></i>--}}
+{{--                        Back to Overview--}}
+{{--                    </a>--}}
+{{--                </div>--}}
             </div>
         </div>
     </div>
