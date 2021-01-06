@@ -5,16 +5,11 @@
         <div class="row justify-content-center">
             <div class="col-md-11">
                 <div class="card">
-                    <div class="card-header">{{ __('Hobby Details') }}</div>
+                    <div class="card-header">{{ $user->name }}</div>
 
                     <div class="card-body">
-                        <b>{{ $hobby->name }}</b>
-                        <p>{{ $hobby->description }}</p>
-                        <p>
-                            @foreach($hobby->tags as $tag)
-                                <a href="/tag"><span class="badge badge-{{ $tag->style }}">{{ $tag->name }}</span></a>
-                            @endforeach
-                        </p>
+                        <b>My Motto: <br>{{ $user->motto }}</b>
+                        <p class="mt-2"><b>About Me:</b> <br>{{ $user->about_me }}</p>
                     </div>
                 </div>
                 <div class="mt-2">
