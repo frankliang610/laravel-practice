@@ -42,9 +42,17 @@
                                     </p>
                                 @endif
                             </div>
-                            <div class="col-md-3">
-                                <img class="img-thumbnail" src="/img/300x400.jpg" alt="{{ $user->name }}">
-                            </div>
+                            @if(Auth::user() && file_exists('img/users/' . $user->id . '_large.jpg'))
+                                <div class="col-md-3">
+                                    <img class="img-thumbnail" src="/img/users/{{ $user->id }}_large.jpg" alt="{{ $user->name }}">
+                                </div>
+                            @endif
+
+                            @if(!Auth::user() && file_exists('img/users/' . $user->id . '_pixelated.jpg'))
+                                <div class="col-md-3">
+                                    <img class="img-thumbnail" src="/img/users/{{ $user->id }}_pixelated.jpg" alt="{{ $user->name }}">
+                                </div>
+                            @endif
                         </div>
 
 

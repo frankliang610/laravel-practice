@@ -97,8 +97,6 @@ class HobbyController extends Controller
      */
     public function edit(Hobby $hobby)
     {
-
-
         return view('hobby.edit', [
             'hobby' => $hobby,
             'message_success' => Session::get('message_success'),
@@ -130,7 +128,7 @@ class HobbyController extends Controller
             'description' => $request->description,
         ]);
 
-        return $this->index()->with([
+        return redirect('/home')->with([
             'message_success' => "The hobby <b>" . $hobby->name . "</b> has been updated successfully."
         ]);
     }

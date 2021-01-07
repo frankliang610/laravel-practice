@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use App\Hobby;
 
 class HomeController extends Controller
@@ -29,7 +30,8 @@ class HomeController extends Controller
             ->orderBy('updated_at', 'DESC')
             ->get();
         return view('home', [
-            'hobbies' => $hobbies
+            'hobbies' => $hobbies,
+            'message_success' => Session::get('message_success')
         ]);
     }
 }

@@ -38,9 +38,13 @@
                                     @endauth
                                     <span class="mx-2">Posted by: <a
                                             href="/user/{{ $hobby->user->id }}">{{ $hobby->user->name }} ({{ $hobby->user->hobbies->count() }} Hobbies)</a>
-                                    <a href="/user/{{ $hobby->user->id }}"><img
-                                            class="rounded"
-                                            src="/img/thumb_portrait.jpg"></a>
+                                        @if(file_exists('img/users/' . $hobby->user->id . '_thumb.jpg'))
+                                            <a href="/user/{{ $hobby->user->id }}">
+                                                <img
+                                                    src="/img/users/{{ $hobby->user->id }}_thumb.jpg"
+                                                    alt="User Thumb">
+                                            </a>
+                                        @endif
                                     </span>
                                     @auth
                                         <form class="float-right"
