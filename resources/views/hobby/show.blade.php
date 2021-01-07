@@ -16,7 +16,8 @@
                                     <b>Used Tags:</b> (Click to remove)
                                     <p>
                                         @foreach($hobby->tags as $tag)
-                                            <a href="/hobby/{{$hobby->id}}/tag/{{$tag->id}}/detach"><span class="badge badge-{{ $tag->style }}">{{ $tag->name }}</span></a>
+                                            <a href="/hobby/{{$hobby->id}}/tag/{{$tag->id}}/detach"><span
+                                                    class="badge badge-{{ $tag->style }}">{{ $tag->name }}</span></a>
                                         @endforeach
                                     </p>
                                 @endif
@@ -25,21 +26,34 @@
                                     <b>Available Tags:</b> (Click to assign)
                                     <p>
                                         @foreach($available_tags as $tag)
-                                            <a href="/hobby/{{$hobby->id}}/tag/{{$tag->id}}/attach"><span class="badge badge-{{ $tag->style }}">{{ $tag->name }}</span></a>
+                                            <a href="/hobby/{{$hobby->id}}/tag/{{$tag->id}}/attach"><span
+                                                    class="badge badge-{{ $tag->style }}">{{ $tag->name }}</span></a>
                                         @endforeach
                                     </p>
                                 @endif
                             </div>
                             <div class="col-md-3">
-                                <a href="/img/400x300.jpg" data-lightbox="400x300.jpg" data-title="{{ $hobby->name }}">
-                                    <img class="img-fluid" src="/img/400x300.jpg" alt="">
-                                </a>
-                                <i class="fa fa-search-plus"></i> Click image to enlarge
+                                @if(Auth::user() && file_exists('img/hobbies/' . $hobby->id . '_large.jpg'))
+                                    <a href="/img/hobbies/{{ $hobby->id }}_large.jpg"
+                                       data-lightbox="img/hobbies/{{ $hobby->id }}_large.jpg"
+                                       data-title="{{ $hobby->name }}">
+                                        <img class="img-fluid"
+                                             src="/img/hobbies/{{ $hobby->id }}_large.jpg" alt="">
+                                    </a>
+                                    <i class="fa fa-search-plus"></i> Click
+                                    image to enlarge
+                                @endif
+
+                                    @if(!Auth::user() && file_exists('img/hobbies/' . $hobby->id . '_pixelated.jpg'))
+
+                                            <img class="img-fluid"
+                                                 src="/img/hobbies/{{ $hobby->id }}_pixelated.jpg" alt="">
+                                    @endif
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--
+            <!--
                 <div class="mt-2">
                     <a class="btn btn-primary btn-sm" href="{{ URL::previous() }}"><i class="fas fa-arrow-circle-up"></i> Back to Overview</a>
                 </div>

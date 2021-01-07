@@ -2,12 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9573bc01-e181-451d-9417-360464b4ac25" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/vendor/lightbox2/dist/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/vendor/lightbox2/dist/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/vendor/lightbox2/dist/next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/vendor/lightbox2/dist/prev.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MyHobbies.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MyHobbies.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HobbyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HobbyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/hobby/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hobby/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/hobby/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hobby/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/hobby/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hobby/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/hobby/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hobby/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tag/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tag/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <list id="82aac336-e739-498a-9095-c46c2ac7157a" name="added data factory and seeder for related models and tiny changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,6 +158,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
     </include_path>
   </component>
   <component name="ProjectId" id="1mZwR6o7pXv7LkpuFmL0PwV8ATd" />
@@ -186,7 +206,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609714411221</updated>
       <workItem from="1609714414099" duration="48210000" />
-      <workItem from="1609924566491" duration="1008000" />
+      <workItem from="1609924566491" duration="9123000" />
     </task>
     <task id="LOCAL-00001" summary="completed hobby page crud">
       <created>1609807185897</created>
@@ -266,16 +286,5 @@
     <MESSAGE value="imported the error page handlers" />
     <MESSAGE value="polishing tags and hobbies pages" />
     <option name="LAST_COMMIT_MESSAGE" value="polishing tags and hobbies pages" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/HobbyController.php</url>
-          <line>26</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

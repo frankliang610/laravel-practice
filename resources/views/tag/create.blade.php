@@ -14,6 +14,7 @@
                                 <input type="text" class="form-control{{ $errors->has('name') ? ' border-danger' : ''}}" id="name" name="name" value="{{ old('name') }}">
                                 <small class="form-text text-danger">{!! $errors->first('name') !!}</small>
                             </div>
+
                             <div class="form-group">
                                 <label for="style">style</label>
                                 <input type="text" class="form-control{{ $errors->has('style') ? ' border-danger' : ''}}" id="style" name="style" value="{{ old('style') }}">
