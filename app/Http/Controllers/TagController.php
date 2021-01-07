@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Hobby;
 use App\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class TagController extends Controller
 {
